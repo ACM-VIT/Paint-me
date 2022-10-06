@@ -3,10 +3,10 @@
 <img src="https://raw.githubusercontent.com/Malika01/hacktoberfest-readme/master/Final.png">
 </p>
 
-<h2 align="center"> PROJECT TITLE </h2>
+<h2 align="center">PaintMe</h2>
 
 <p align="center"> 
-Short description about the project.
+PaintMe Is a simple one screen-canvas painting app. Feel free to show your artistic talent on the wide canvas provided!
 </p>
 
 <p>
@@ -73,5 +73,5 @@ git merge
 ---
 ## Authors
 
-**Authors:** <!-- [author1's name](link to their github profile), [author2's name](link to their github profile) .. -->  
+**Authors:** <!-- [Anshul Kumar](https://github.com/anshul-kr1), [shambhavi sinha](https://github.com/shambhavisinha07) .. -->  
 **Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
