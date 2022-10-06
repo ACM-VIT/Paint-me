@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PaintMe</string>
+    <string name="canvasContentDescription">Paint me! The canvas is all yours to beautify!</string>
+</resources>
