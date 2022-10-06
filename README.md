@@ -23,14 +23,14 @@ PaintMe Is a simple one screen-canvas painting app. Feel free to show your artis
 
  * Fork the repository by clicking the fork button on top right corner of the page
  * Clone the target repository. To clone, click on the clone button and copy the https address. Then run 
- <pre><code>git clone [HTTPS-ADDRESS]</code></pre>
+ <pre><code>git clone https://github.com/anshul-kr1/Paint-me.git</code></pre>
 * Go to the cloned directory by running 
-<pre><code>cd [NAME-OF-REPO]</code></pre>
+<pre><code>cd paint-me</code></pre>
 * Create a new branch. Use 
 <pre><code> git checkout -b [YOUR-BRANCH-NAME]</code></pre>
 * Make your changes to the code. Add changes to your branch by using 
 <pre><code>git add .</code></pre>
-* Commit the chanes by executing
+* Commit the changes by executing
 <pre><code>git commit -m "your msg"</code></pre>
 * Push to remote. To do this, run 
 <pre><code>git push origin [YOUR-BRANCH-NAME]</code></pre>
