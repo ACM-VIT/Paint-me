@@ -73,5 +73,5 @@ git merge
 ---
 ## Authors
 
-**Authors:** <!-- [Anshul Kumar](https://github.com/anshul-kr1), [shambhavi sinha](https://github.com/shambhavisinha07) .. -->  
+**Authors:** [Anshul Kumar](https://github.com/anshul-kr1), [shambhavi sinha](https://github.com/shambhavisinha07) .. -->  
 **Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
