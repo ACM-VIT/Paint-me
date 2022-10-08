@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://organize.mlh.io/participants/events/4390-kickstarting-hacktoberfest-with-acm-vit">Kicking Off Hacktoberfest with ACM-VIT!</a></h1>
 <p align="center">
-![](D:\PaintMe\pics\Forktober-Banner.png)
+[![Forktober-Banner.png](https://i.postimg.cc/Vs0sJgYQ/Forktober-Banner.png)](https://postimg.cc/grdb5vXN)
 </p>
 
 <h2 align="center">PaintMe</h2>
