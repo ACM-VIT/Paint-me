@@ -50,9 +50,7 @@ PaintMe Is a simple one screen-canvas painting app. Feel free to show your artis
   For additional guidelines, refer to [participation rules](https://hacktoberfest.digitalocean.com/details#rules)
 
 ---
-
--_domain specific guidelines here_-
-  
+ 
 ---
 ## Overview
 
