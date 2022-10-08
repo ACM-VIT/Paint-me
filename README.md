@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://organize.mlh.io/participants/events/4390-kickstarting-hacktoberfest-with-acm-vit">Kicking Off Hacktoberfest with ACM-VIT!</a></h1>
 <p align="center">
-<img src="https://raw.githubusercontent.com/Malika01/hacktoberfest-readme/master/Final.png">
+<img src="D:\PaintMe\pics\Forktober-Banner.png">
 </p>
 
 <h2 align="center">PaintMe</h2>
@@ -73,5 +73,4 @@ git merge
 ---
 ## Authors
 
-**Authors:** [Anshul Kumar](https://github.com/anshul-kr1), [shambhavi sinha](https://github.com/shambhavisinha07) .. -->  
-**Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
+**Authors:** [Anshul Kumar](https://github.com/anshul-kr1), [shambhavi sinha](https://github.com/shambhavisinha07)
