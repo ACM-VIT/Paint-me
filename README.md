@@ -34,7 +34,7 @@ PaintMe Is a simple one screen-canvas painting app. Feel free to show your artis
 * Push to remote. To do this, run 
 <pre><code>git push origin [YOUR-BRANCH-NAME]</code></pre>
 * Create a pull request. Go to the target repository and click on the "Compare & pull request" button. **Make sure your PR description mentions which issues you're solving.**
-<img src="https://drive.google.com/u/1/uc?id=1f9JKAR-kRvCRGxIs_SAvegaYDPx53T9G&export=download"></img>
+  [![ss.png](https://i.postimg.cc/X70Z3m9D/ss.png)](https://postimg.cc/MXdZmsPy)
 * Wait for your request to be accepted. 
 
 ---
@@ -54,7 +54,7 @@ PaintMe Is a simple one screen-canvas painting app. Feel free to show your artis
 ---
 ## Overview
 
-The overview starts here. Random text about the project, motive, how, what, why etc.
+PaintMe is a fun app to showcase how you can make a simple paint app using Canvas.
 
 ---
 ## Usage
