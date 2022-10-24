@@ -2,6 +2,7 @@ package com.example.android.paintme
 
 import android.content.Context
 import android.graphics.*
+import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -10,7 +11,9 @@ import kotlin.math.abs
 
 private const val STROKE_WIDTH = 15f
 
-class MyCanvasView(context: Context) : View(context) {
+class MyCanvasView@JvmOverloads constructor(context: Context,
+                                            attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+    : View(context, attrs, defStyleAttr) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
@@ -43,7 +46,10 @@ class MyCanvasView(context: Context) : View(context) {
         super.onDraw(canvas)
         canvas.drawBitmap(extraBitmap, 0f, 0f, null)
     }
-
+    fun changeBgColor( color : String)
+    {
+        extraCanvas.drawColor(Color.parseColor(color))
+    }
     override fun onTouchEvent(event: MotionEvent): Boolean {
         motionTouchEventX = event.x
         motionTouchEventY = event.y
