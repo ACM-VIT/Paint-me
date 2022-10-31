@@ -9,15 +9,22 @@ import android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
 import android.widget.Button
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.github.dhaval2404.colorpicker.model.ColorShape
+import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var chngBgColor : Button
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var myCanvasView : MyCanvasView = findViewById(R.id.myCanvas)
+        setContentView(R.layout.activity_main)
+
+        val fab=findViewById<FloatingActionButton>(R.id.floatingActionButton2)
 
         myCanvasView.contentDescription = getString(R.string.canvasContentDescription)
 
@@ -40,5 +47,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+        val canvas=findViewById<MyCanvasView>(R.id.Canvas)
+        fab.setOnClickListener {
+            canvas.clear()
+        }
     }
 }

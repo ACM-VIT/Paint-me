@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorBackground">#ADD8E6</color>
     <color name="colorPaint">#FF0000</color>
+    <color name="progressBar">#FF914D</color>
 </resources>

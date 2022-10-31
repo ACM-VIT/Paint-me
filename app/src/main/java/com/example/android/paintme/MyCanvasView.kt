@@ -2,7 +2,6 @@ package com.example.android.paintme
 
 import android.content.Context
 import android.graphics.*
-import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -17,6 +16,7 @@ class MyCanvasView@JvmOverloads constructor(context: Context,
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
+    private val inset = 20
     private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
     private val paint = Paint().apply {
@@ -39,6 +39,12 @@ class MyCanvasView@JvmOverloads constructor(context: Context,
 
         val inset = 20
         frame = Rect(inset, inset, w - inset, h - inset)
+        extraCanvas.drawRect(frame, paint)
+    }
+
+    fun clear(){
+        extraCanvas.drawColor(backgroundColor)
+        frame = Rect(inset, inset, width - inset, height - inset)
         extraCanvas.drawRect(frame, paint)
     }
 
