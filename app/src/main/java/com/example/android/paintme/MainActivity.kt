@@ -16,13 +16,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class MainActivity : AppCompatActivity() {
 
     lateinit var chngBgColor : Button
-    @RequiresApi(Build.VERSION_CODES.R)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var myCanvasView : MyCanvasView = findViewById(R.id.myCanvas)
-        setContentView(R.layout.activity_main)
+        val myCanvasView : MyCanvasView = findViewById(R.id.myCanvas)
 
         val fab=findViewById<FloatingActionButton>(R.id.floatingActionButton2)
 
@@ -44,13 +43,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 .show()
         }
-
-
-
-
-        val canvas=findViewById<MyCanvasView>(R.id.Canvas)
-        fab.setOnClickListener {
-            canvas.clear()
+        fab.setOnClickListener{
+            myCanvasView.clear()
         }
     }
 }

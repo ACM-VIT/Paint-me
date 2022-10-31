@@ -2,6 +2,7 @@ package com.example.android.paintme
 
 import android.content.Context
 import android.graphics.*
+import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -30,6 +31,10 @@ class MyCanvasView@JvmOverloads constructor(context: Context,
     }
     private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
 
+    fun changeBgColor( color : String)
+    {
+        extraCanvas.drawColor(Color.parseColor(color))
+    }
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         if (::extraBitmap.isInitialized) extraBitmap.recycle()
@@ -52,10 +57,7 @@ class MyCanvasView@JvmOverloads constructor(context: Context,
         super.onDraw(canvas)
         canvas.drawBitmap(extraBitmap, 0f, 0f, null)
     }
-    fun changeBgColor( color : String)
-    {
-        extraCanvas.drawColor(Color.parseColor(color))
-    }
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         motionTouchEventX = event.x
         motionTouchEventY = event.y
