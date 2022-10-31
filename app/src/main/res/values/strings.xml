@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PaintMe</string>
     <string name="canvasContentDescription">Paint me! The canvas is all yours to beautify!</string>
+    <string name="clear_canvas">Clear Canvas</string>
 </resources>

@@ -2,18 +2,21 @@ package com.example.android.paintme
 
 import android.content.Context
 import android.graphics.*
+import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
 import androidx.core.content.res.ResourcesCompat
 import kotlin.math.abs
 
+
 private const val STROKE_WIDTH = 15f
 
-class MyCanvasView(context: Context) : View(context) {
+class MyCanvasView(context: Context, attributeSet: AttributeSet?) : View(context,attributeSet) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
+    private val inset = 20
     private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
     private val paint = Paint().apply {
@@ -25,17 +28,24 @@ class MyCanvasView(context: Context) : View(context) {
         strokeCap = Paint.Cap.ROUND
         strokeWidth = STROKE_WIDTH
     }
+    constructor(context: Context):this(context,null)
     private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         if (::extraBitmap.isInitialized) extraBitmap.recycle()
+
         extraBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
         extraCanvas = Canvas(extraBitmap)
         extraCanvas.drawColor(backgroundColor)
 
-        val inset = 20
         frame = Rect(inset, inset, w - inset, h - inset)
+        extraCanvas.drawRect(frame, paint)
+    }
+
+    fun clear(){
+        extraCanvas.drawColor(backgroundColor)
+        frame = Rect(inset, inset, width - inset, height - inset)
         extraCanvas.drawRect(frame, paint)
     }
 
