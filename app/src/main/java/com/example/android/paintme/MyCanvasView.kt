@@ -9,10 +9,11 @@ import android.view.ViewConfiguration
 import androidx.core.content.res.ResourcesCompat
 import kotlin.math.abs
 
-
 private const val STROKE_WIDTH = 15f
 
-class MyCanvasView(context: Context, attributeSet: AttributeSet?) : View(context,attributeSet) {
+class MyCanvasView@JvmOverloads constructor(context: Context,
+                                            attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+    : View(context, attrs, defStyleAttr) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
@@ -28,17 +29,20 @@ class MyCanvasView(context: Context, attributeSet: AttributeSet?) : View(context
         strokeCap = Paint.Cap.ROUND
         strokeWidth = STROKE_WIDTH
     }
-    constructor(context: Context):this(context,null)
     private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
 
+    fun changeBgColor( color : String)
+    {
+        extraCanvas.drawColor(Color.parseColor(color))
+    }
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         if (::extraBitmap.isInitialized) extraBitmap.recycle()
-
         extraBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
         extraCanvas = Canvas(extraBitmap)
         extraCanvas.drawColor(backgroundColor)
 
+        val inset = 20
         frame = Rect(inset, inset, w - inset, h - inset)
         extraCanvas.drawRect(frame, paint)
     }
